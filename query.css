@@ -1,0 +1,291 @@
+/* Responsive and compact layout for Bankist app */
+
+/* General tweaks for all screens */
+@media (max-width: 1200px) {
+  html {
+    font-size: 56%;
+  }
+  .app {
+    max-width: 98vw;
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+  .app {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 1.2rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .balance {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .summary {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  .operation {
+    grid-column: 1 / span 2;
+    margin-bottom: 0.5rem;
+  }
+  .logout-timer {
+    grid-column: 1 / span 2;
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile: keep login, logo, username, pin, arrow in a row */
+@media (max-width: 700px) {
+  html {
+    font-size: 44%;
+  }
+  nav {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .welcome {
+    flex: 1 1 auto;
+    font-size: 1.3rem;
+    min-width: 8rem;
+    margin-right: 0.5rem;
+  }
+  .logo {
+    height: 3.2rem;
+    margin: 0 0.5rem;
+  }
+  .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    width: auto;
+    margin-left: auto;
+  }
+  .login__input {
+    width: 7rem;
+    font-size: 1.1rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0.3rem 0.7rem;
+  }
+  .login__btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  /* Main app grid: keep balance and summary side by side, then movements and summary below */
+  .app {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0.7rem;
+    margin: 1rem auto;
+    padding: 0 0.2rem;
+  }
+  .balance {
+    grid-column: 1 / span 2;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .balance__value {
+    font-size: 2.1rem;
+  }
+  .movements {
+    grid-column: 1 / span 2;
+    max-height: 32vh;
+    min-height: 15vh;
+    overflow-y: auto;
+    margin-bottom: 0.5rem;
+  }
+  .movements__row {
+    padding: 0.7rem 0.5rem;
+    font-size: 1.1rem;
+  }
+  .summary {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    justify-content: flex-start;
+  }
+  .btn--sort {
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.7rem;
+  }
+  .operation {
+    grid-column: 1 / span 2;
+    margin-bottom: 0.5rem;
+    padding: 0.7rem 0.5rem;
+  }
+  .logout-timer {
+    grid-column: 1 / span 2;
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  .login-demo {
+    max-width: 98vw;
+    font-size: 1rem;
+    padding: 0.7rem 0.2rem;
+  }
+
+  .summary,
+  .logout-timer {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    max-width: 98vw;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 450px) {
+  html {
+    font-size: 36%;
+  }
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    padding: 0 0.1rem;
+  }
+  .logo {
+    height: 2.2rem;
+  }
+  .login__input {
+    width: 5.5rem;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .login__btn {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .app {
+    gap: 0.3rem;
+    padding: 0 0.1rem;
+  }
+  .movements__row {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.9rem;
+  }
+  .operation {
+    padding: 0.4rem 0.2rem;
+  }
+  .login-demo {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.1rem;
+  }
+}
+
+/* Compact movements and operations on all screens */
+.movements,
+.operation {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* On mobile, make them even more compact */
+@media (max-width: 700px) {
+  .movements,
+  .operation {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    max-width: 98vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .login-demo {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    max-width: 98vw;
+  }
+  .movements__row {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* On extra small screens */
+@media (max-width: 450px) {
+  .movements,
+  .operation {
+    max-width: 100vw;
+    padding-left: 0.05rem;
+    padding-right: 0.05rem;
+  }
+  .movements__row {
+    max-width: 340px;
+  }
+}
+@media (max-width: 700px) {
+  .summary {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.2rem 0;
+  }
+  .summary__label,
+  .summary__value,
+  .btn--sort {
+    font-size: 1rem;
+    padding: 0.1rem 0.3rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .btn--sort {
+    min-width: unset;
+    font-size: 1rem;
+  }
+}
+/* Additional styles for mobile summary */
+@media (max-width: 700px) {
+  .summary {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.7rem;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .summary__label,
+  .summary__value,
+  .btn--sort {
+    white-space: nowrap;
+  }
+}

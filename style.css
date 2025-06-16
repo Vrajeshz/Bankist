@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #444;
   background-color: #f3f3f3;
   height: 100vh;
@@ -294,4 +294,51 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+/* Demo login table styles */
+.login-demo {
+  max-width: 350px;
+  margin: 2rem auto 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.login-demo h3 {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+}
+.login-demo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.login-demo th,
+.login-demo td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid #eee;
+}
+.login-demo th {
+  color: #666;
+  font-weight: 600;
+}
+.login-demo td {
+  color: #222;
+}
+.login-demo tr:last-child td {
+  border-bottom: none;
+}
+.login-demo {
+  transition: opacity 0.3s;
+}
+.login-demo.hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
