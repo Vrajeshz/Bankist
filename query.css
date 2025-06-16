@@ -288,4 +288,30 @@
   .btn--sort {
     white-space: nowrap;
   }
+  /* Add vertical spacing between main sections */
+  .movements,
+  .operation,
+  .summary,
+  .logout-timer,
+  .login-demo {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  } /* Center the logo in the nav bar */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .logo {
+    order: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
